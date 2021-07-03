@@ -1,0 +1,138 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    user-select: none;
+    body{
+        overflow: hidden;
+        width: 100vw;
+        height: 100vh;
+        main{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            section.Game{
+                display: flex;
+                flex-direction: column;
+                header{
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    width: calc(100% - calc(10px * 2 ));
+                    display: flex;
+                    justify-content: space-between;
+                    padding: 5px 10px;
+                    .Time{
+                        width: 300px;
+                        height: 25px;
+                        background: red;
+                        border-radius: 1rem;
+                        overflow: hidden;
+                        .Damage{
+                            width: 100%;
+                            height: 100%;
+                            background: green;
+                        }
+                    }
+                }
+                .Controller{
+                    width: 100vw;
+                    height: 100vh;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-items: center;
+                    button{
+                        cursor: pointer;
+                        background: transparent;
+                        border: none;
+                        width: 50%;
+                        height: 100%;
+                        &:nth-child(1){
+                            background: #00df2d;
+                        }
+                        &:nth-child(2){
+                            background: yellow;
+                        }
+                        &.Disable{
+                            display: none;
+                        }
+                    }
+                }
+            }
+            section.Wellcome{
+                position: relative;
+                width: 100vw;
+                height: 100vh;
+                background: red;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                .Form{
+                    width: 300px;
+                    height: calc(400px - calc(5px * 2));
+                    background: #ffffff;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-around;
+                    align-items: center;
+                    text-align: center;
+                    color: #00df2d;
+                    border-radius: 8px;
+                    padding: 5px 0;
+                    .BestScore{
+                        width: 100%;
+                        h4, h2{
+                            font-family: 'Playball', cursive;
+                            font-size: 2.5em;
+                        }
+                    }
+                    form{
+                        input[type="text"],
+                        input[type="password"] {
+                            width: 200px;
+                            border: 1px #00df2d solid;
+                            padding: 3px 4px;
+                            border-radius: 4px;
+                            margin: 2px 0;
+                            &:focus{
+                            }
+                        }
+                    }
+                    button.Play{
+                        cursor: pointer;
+                        background: #00df2d;
+                        border: none;
+                        border: 2px #00df2d solid;
+                        width: 250px;
+                        padding: 7px;
+                        margin: 15px 0;
+                        font-family: 'Playball', cursive;
+                        font-size: 2em;
+                        color: white;
+                        border-radius: .8rem;
+                        &:hover{
+                            border: 2px #00d62b solid;
+                        }
+                    }
+                }
+                &.Disable{
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+@keyframes Low {
+    from {
+        width: 100%;
+    }
+    to {
+        width: 0;
+    }
+}

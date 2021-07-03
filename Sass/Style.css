@@ -1,0 +1,210 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+* body {
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+}
+
+* body main {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+* body main section.Game {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+* body main section.Game header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: calc(100% - calc(10px * 2 ));
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 5px 10px;
+}
+
+* body main section.Game header .Time {
+  width: 300px;
+  height: 25px;
+  background: red;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+* body main section.Game header .Time .Damage {
+  width: 100%;
+  height: 100%;
+  background: green;
+}
+
+* body main section.Game .Controller {
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+* body main section.Game .Controller button {
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  width: 50%;
+  height: 100%;
+}
+
+* body main section.Game .Controller button:nth-child(1) {
+  background: #00df2d;
+}
+
+* body main section.Game .Controller button:nth-child(2) {
+  background: yellow;
+}
+
+* body main section.Game .Controller button.Disable {
+  display: none;
+}
+
+* body main section.Wellcome {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background: red;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+* body main section.Wellcome .Form {
+  width: 300px;
+  height: calc(400px - calc(5px * 2));
+  background: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  color: #00df2d;
+  border-radius: 8px;
+  padding: 5px 0;
+}
+
+* body main section.Wellcome .Form .BestScore {
+  width: 100%;
+}
+
+* body main section.Wellcome .Form .BestScore h4, * body main section.Wellcome .Form .BestScore h2 {
+  font-family: 'Playball', cursive;
+  font-size: 2.5em;
+}
+
+* body main section.Wellcome .Form form input[type="text"],
+* body main section.Wellcome .Form form input[type="password"] {
+  width: 200px;
+  border: 1px #00df2d solid;
+  padding: 3px 4px;
+  border-radius: 4px;
+  margin: 2px 0;
+}
+
+* body main section.Wellcome .Form button.Play {
+  cursor: pointer;
+  background: #00df2d;
+  border: none;
+  border: 2px #00df2d solid;
+  width: 250px;
+  padding: 7px;
+  margin: 15px 0;
+  font-family: 'Playball', cursive;
+  font-size: 2em;
+  color: white;
+  border-radius: .8rem;
+}
+
+* body main section.Wellcome .Form button.Play:hover {
+  border: 2px #00d62b solid;
+}
+
+* body main section.Wellcome.Disable {
+  display: none;
+}
+
+@-webkit-keyframes Low {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 0;
+  }
+}
+
+@keyframes Low {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 0;
+  }
+}
+/*# sourceMappingURL=Style.css.map */
