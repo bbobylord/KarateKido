@@ -128,7 +128,7 @@
   opacity: 0;
 }
 
-* body main .Controller button {
+* body main .Controller span {
   cursor: pointer;
   background: transparent;
   border: none;
@@ -136,15 +136,15 @@
   height: 100%;
 }
 
-* body main .Controller button:nth-child(1) {
+* body main .Controller span:nth-child(1) {
   background: #00df2d;
 }
 
-* body main .Controller button:nth-child(2) {
+* body main .Controller span:nth-child(2) {
   background: yellow;
 }
 
-* body main .Controller button.Disable {
+* body main .Controller span.Disable {
   display: none;
 }
 
