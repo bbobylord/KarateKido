@@ -1,4 +1,4 @@
-let Time = Number(3000);
+let Time = Number(10000);
 let ReadyTime = Number(3);
 
 
@@ -18,11 +18,9 @@ function Start() {
         .querySelector(".Controller .Btn-Right")
         .classList.remove("Disable");
 
-        if(document.getElementById("Score").innerHTML == "Start"){
-            document.getElementById("Score").innerHTML = 0;
-        } else {}
-
         document.querySelector("#Ready").classList.add("Disable");
+        document.querySelector("#Record").classList.remove("Disable");
+        document.querySelector("#Start").classList.add("Disable");
 
         TimeOut();
     }
@@ -30,11 +28,11 @@ function Start() {
 
 function Strick(Float) {
 
-  var Score = Number(document.getElementById("Score").innerHTML);
-
-  document.getElementById("Score").innerHTML = Score + 10;
-
-}
+    var Record = Number(document.getElementById("Record").innerHTML);
+  
+    document.getElementById("Record").innerHTML = Record + 10;
+  
+  }
 
 function TimeOut() {
 

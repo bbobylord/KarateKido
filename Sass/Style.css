@@ -72,6 +72,29 @@
   background: green;
 }
 
+* body main section.Game header .Score {
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+* body main section.Game header .Score .Record,
+* body main section.Game header .Score .Start {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+* body main section.Game header .Score .Record.Disable,
+* body main section.Game header .Score .Start.Disable {
+  display: none;
+}
+
 * body main section.Game .Ready,
 * body main section.Game .End {
   position: absolute;

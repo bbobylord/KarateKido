@@ -39,6 +39,18 @@
                             background: green;
                         }
                     }
+                    .Score{
+                        color: #fff;
+                        display: flex;
+                        flex-direction: row;
+                        .Record,
+                        .Start{
+                            display: flex;
+                            &.Disable{
+                                display: none;
+                            }
+                        }
+                    }
                 }
                 .Ready,
                 .End{
