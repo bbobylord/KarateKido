@@ -38,6 +38,17 @@
                         }
                     }
                 }
+                .Ready{
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%) scale(0);
+                    font-size: 10em;
+                    animation: Scale 1000ms forwards linear normal;
+                    &.Disable{
+                        display: none;
+                    }
+                }
                 .Controller{
                     width: 100vw;
                     height: 100vh;
@@ -99,8 +110,6 @@
                             padding: 3px 4px;
                             border-radius: 4px;
                             margin: 2px 0;
-                            &:focus{
-                            }
                         }
                     }
                     button.Play{
@@ -134,5 +143,14 @@
     }
     to {
         width: 0;
+    }
+}
+
+@keyframes Scale {
+    from {
+        transform: translate(-50%, -50%) scale(0);
+    }
+    to {
+        transform: translate(-50%, -50%) scale(1);
     }
 }
