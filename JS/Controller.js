@@ -1,10 +1,15 @@
-let Time = Number(10000);
+let Time = Number(3000);
 let ReadyTime = Number(3);
 
 
 setInterval(() => {
     
-    if(ReadyTime !== 0){
+    Start();
+
+}, 1000);
+
+function Start() {
+    if(ReadyTime !== 1){
         ReadyTime --;
         document.getElementById("Ready").innerHTML = ReadyTime;
     }else{
@@ -13,10 +18,15 @@ setInterval(() => {
         .querySelector(".Controller .Btn-Right")
         .classList.remove("Disable");
 
+        if(document.getElementById("Score").innerHTML == "Start"){
+            document.getElementById("Score").innerHTML = 0;
+        } else {}
+
+        document.querySelector("#Ready").classList.add("Disable");
+
         TimeOut();
     }
-
-}, 1000);
+}
 
 function Strick(Float) {
 
@@ -36,8 +46,8 @@ function TimeOut() {
 
         document.querySelector(".Controller .Btn-Left").classList.add("Disable");
         document.querySelector(".Controller .Btn-Right").classList.add("Disable");
-        document.querySelector("#Ready").classList.remove("Disable");
-        document.querySelector("#Ready").innerHTML = "Ended"
+
+        document.querySelector("#End").classList.remove("Disable");
 
       }, Time);
 
