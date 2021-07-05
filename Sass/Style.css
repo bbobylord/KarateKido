@@ -1,7 +1,7 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -38,7 +38,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: calc(100% - calc(10px * 2 ));
+  width: calc(100% - calc(10px * 2));
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -49,6 +49,7 @@
       -ms-flex-align: center;
           align-items: center;
   padding: 5px 10px;
+  z-index: 10;
 }
 
 * body main header .Time {
@@ -97,6 +98,7 @@
           transform: translate(-50%, -50%);
   font-size: 10em;
   color: #fff;
+  z-index: 8;
 }
 
 * body main .Ready.Disable,
@@ -104,9 +106,136 @@
   display: none;
 }
 
-* body main .End {
+* body main .Ready.End,
+* body main .End.End {
   -webkit-animation: Scale 500ms forwards linear normal;
           animation: Scale 500ms forwards linear normal;
+}
+
+* body main .OK {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 7;
+  -webkit-transform: translateY(-100px);
+          transform: translateY(-100px);
+}
+
+* body main .OK .TreeDecreasing {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-size: 50% 900%;
+  z-index: 4;
+}
+
+* body main .OK .TreeDecreasing .Cover {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+* body main .OK .TreeDecreasing .Cover img {
+  width: 200px;
+  height: 100vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
+}
+
+* body main .OK .TreeFixed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-size: 50% 900%;
+  z-index: 5;
+}
+
+* body main .OK .TreeFixed .Cover {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+* body main .OK .TreeFixed .Cover img {
+  width: 200px;
+  height: 50px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: bottom;
+     object-position: bottom;
 }
 
 * body main .Controller {
@@ -126,6 +255,7 @@
       -ms-flex-align: center;
           align-items: center;
   opacity: 0;
+  z-index: 9;
 }
 
 * body main .Controller span {
