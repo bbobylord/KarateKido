@@ -22,17 +22,11 @@ function Start() {
         document.querySelector("#Record").classList.remove("Disable");
         document.querySelector("#Start").classList.add("Disable");
 
+        document.onkeydown = checkKey;
+
         TimeOut();
     }
 }
-
-function Strick(Float) {
-
-    var Record = Number(document.getElementById("Record").innerHTML);
-  
-    document.getElementById("Record").innerHTML = Record + 10;
-  
-  }
 
 function TimeOut() {
 
@@ -47,6 +41,31 @@ function TimeOut() {
 
         document.querySelector("#End").classList.remove("Disable");
 
+        document.onkeydown = null;
+
       }, Time);
+
+}
+
+function checkKey(e) {
+
+    e = e || window.event;
+
+     if (e.keyCode == '37') {
+        Strick("Left")
+    }
+    else if (e.keyCode == '39') {
+        Strick("Right")
+    }
+
+}
+
+function Strick(Float) {
+
+    var Record = Number(document.getElementById("Record").innerHTML);
+
+    document.getElementById("Record").innerHTML = Record + 10;
+
+    console.log(Float);
 
 }
