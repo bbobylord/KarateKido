@@ -3,7 +3,7 @@ let ReadyTime = Number(3);
 let Day = "https://s19.picofile.com/file/8437587650/Day.png"
 let Night = "https://s18.picofile.com/file/8437587668/Night.png"
 var d = new Date();
-var h = d.getHours();
+var h = d.getHours();  
 
 function ChangeBackground(Hour) {
     if(Hour < 19 && Hour > 7){
@@ -12,7 +12,6 @@ function ChangeBackground(Hour) {
         document.getElementById("Main").style.background = `url("${Night}") center center / cover no-repeat`;
     }
 }
-
 
 setInterval(() => {
     
@@ -43,10 +42,6 @@ function Start() {
 }
 
 function TimeOut() {
-
-    document.getElementById(
-        "Damage"
-      ).style.animation = `Low ${Time}ms forwards normal`;
 
     setInterval(() => {
 
@@ -90,4 +85,8 @@ function CheckCharacter(Float) {
     document.querySelector("#Left").classList.add("Disable");
     document.querySelector("#Right").classList.add("Disable");
     document.querySelector("#" + Float).classList.remove("Disable");
+}
+
+function name(params) {
+    
 }

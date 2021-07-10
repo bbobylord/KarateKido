@@ -238,6 +238,7 @@
 }
 
 * body main .OK .Character {
+  position: relative;
   width: 100%;
   height: 100%;
   display: -webkit-box;
@@ -255,8 +256,10 @@
           align-items: flex-end;
 }
 
-* body main .OK .Character div {
+* body main .OK .Character section {
+  position: relative;
   width: 500px;
+  height: 500px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -267,13 +270,32 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  z-index: 1000;
 }
 
-* body main .OK .Character div img {
-  width: 250px;
+* body main .OK .Character section #Right, * body main .OK .Character section #Left {
+  width: 300px;
+  height: 300px;
 }
 
-* body main .OK .Character div img.Disable {
+* body main .OK .Character section #Right#Right, * body main .OK .Character section #Left#Right {
+  background: url("https://s19.picofile.com/file/8437708076/Right.png") center center no-repeat;
+  background-size: 80%;
+  -webkit-animation: RightBackground 200ms forwards linear normal;
+          animation: RightBackground 200ms forwards linear normal;
+}
+
+* body main .OK .Character section #Right#Left, * body main .OK .Character section #Left#Left {
+  background: url("https://s18.picofile.com/file/8437708050/Left.png") center center no-repeat;
+  background-size: 80%;
+  -webkit-animation: LeftBackground 200ms forwards linear normal;
+          animation: LeftBackground 200ms forwards linear normal;
+}
+
+* body main .OK .Character section #Right.Disable, * body main .OK .Character section #Left.Disable {
   display: none;
 }
 
@@ -317,24 +339,6 @@
   display: none;
 }
 
-@-webkit-keyframes Low {
-  from {
-    width: 100%;
-  }
-  to {
-    width: 0;
-  }
-}
-
-@keyframes Low {
-  from {
-    width: 100%;
-  }
-  to {
-    width: 0;
-  }
-}
-
 @-webkit-keyframes Scale {
   from {
     -webkit-transform: translate(-50%, -50%) scale(0);
@@ -354,6 +358,50 @@
   to {
     -webkit-transform: translate(-50%, -50%) scale(1);
             transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+@-webkit-keyframes RightBackground {
+  0%, 24%, 76%, 100% {
+    background: url("https://s19.picofile.com/file/8437708076/Right.png") center center no-repeat;
+    background-size: 80%;
+  }
+  25%, 75%, 69% {
+    background: url("https://s19.picofile.com/file/8437708068/Right_Strike.png") center center no-repeat;
+    background-size: 80%;
+  }
+}
+
+@keyframes RightBackground {
+  0%, 24%, 76%, 100% {
+    background: url("https://s19.picofile.com/file/8437708076/Right.png") center center no-repeat;
+    background-size: 80%;
+  }
+  25%, 75%, 69% {
+    background: url("https://s19.picofile.com/file/8437708068/Right_Strike.png") center center no-repeat;
+    background-size: 80%;
+  }
+}
+
+@-webkit-keyframes LeftBackground {
+  0%, 24%, 76%, 100% {
+    background: url("https://s18.picofile.com/file/8437708050/Left.png") center center no-repeat;
+    background-size: 80%;
+  }
+  25%, 75%, 69% {
+    background: url("https://s18.picofile.com/file/8437708034/Left_Strike.png") center center no-repeat;
+    background-size: 80%;
+  }
+}
+
+@keyframes LeftBackground {
+  0%, 24%, 76%, 100% {
+    background: url("https://s18.picofile.com/file/8437708050/Left.png") center center no-repeat;
+    background-size: 80%;
+  }
+  25%, 75%, 69% {
+    background: url("https://s18.picofile.com/file/8437708034/Left_Strike.png") center center no-repeat;
+    background-size: 80%;
   }
 }
 /*# sourceMappingURL=Style.css.map */
