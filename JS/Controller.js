@@ -14,17 +14,17 @@ function ChangeBackground(Hour) {
 }
 
 setInterval(() => {
-    
     Start();
     ChangeBackground(h);
-
 }, 1000);
 
 function Start() {
 
-    if(ReadyTime !== 1){
-        ReadyTime --;
-        document.getElementById("Ready").innerHTML = ReadyTime;
+    if(ReadyTime >= 1){
+        setTimeout(() => {
+            ReadyTime --;
+            document.getElementById("Ready").innerHTML = ReadyTime;
+        }, 1000);
     }else{
         document.querySelector(".Controller .Btn-Left").classList.remove("Disable");
         document
@@ -37,23 +37,24 @@ function Start() {
 
         document.onkeydown = checkKey;
 
+        document.querySelector("#Damage").style.width = `${Time / 100}%`;
+        document.querySelector("#Label").innerHTML = `${Time / 1000} Seconds`;
+        
         TimeOut();
     }
 }
 
 function TimeOut() {
+    if(Time <= 0){
+    document.querySelector(".Controller .Btn-Left").classList.add("Disable");
+    document.querySelector(".Controller .Btn-Right").classList.add("Disable");
 
-    setInterval(() => {
+    document.querySelector("#End").classList.remove("Disable");
 
-        document.querySelector(".Controller .Btn-Left").classList.add("Disable");
-        document.querySelector(".Controller .Btn-Right").classList.add("Disable");
-
-        document.querySelector("#End").classList.remove("Disable");
-
-        document.onkeydown = null;
-
-      }, Time);
-
+    document.onkeydown = null;
+    } else {
+        LowDamage();
+    }
 }
 
 function checkKey(e) {
@@ -77,7 +78,7 @@ function Strick(Float) {
 
     CheckCharacter(Float);
 
-    console.log(Float);
+    HighDamage();
 
 }
 
@@ -87,6 +88,13 @@ function CheckCharacter(Float) {
     document.querySelector("#" + Float).classList.remove("Disable");
 }
 
-function name(params) {
-    
+function LowDamage() {
+    Time = Number(Time - 1000);
+    console.log(Time);
+}
+
+function HighDamage() {
+    if(Time < 10000){
+        Time = Number(Time + 250);
+    } else {}
 }
