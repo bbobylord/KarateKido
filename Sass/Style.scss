@@ -116,6 +116,9 @@
               object-position: top;
             }
           }
+          &.Talk{
+            transform: translateY(-20px);
+          }
         }
         .Tree{
           .TreeFixed {

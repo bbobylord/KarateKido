@@ -76,6 +76,8 @@ function Strick(Float) {
 
     document.getElementById("Record").innerHTML = Record + 10;
 
+    document.querySelector(".TreeDecreasing").classList.toggle("Talk");
+
     CheckCharacter(Float);
 
     HighDamage();

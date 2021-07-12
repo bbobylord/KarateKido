@@ -200,6 +200,11 @@
      object-position: top;
 }
 
+* body main .OK .TreeDecreasing.Talk {
+  -webkit-transform: translateY(-20px);
+          transform: translateY(-20px);
+}
+
 * body main .OK .Tree .TreeFixed {
   position: absolute;
   top: 0;
