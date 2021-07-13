@@ -204,8 +204,15 @@ function RemoveElement() {
 }
 
 function Lost() {
+
+  document.querySelector(".Character #Right").classList.add("Disable");
+  document.querySelector(".Character #Left").classList.add("Disable");
+
+
   document.querySelector(".Controller .Btn-Left").classList.add("Disable");
   document.querySelector(".Controller .Btn-Right").classList.add("Disable");
+
+  document.querySelector(".Character #Dead").classList.remove("Disable");
 
   document.querySelector("#End").classList.remove("Disable");
 

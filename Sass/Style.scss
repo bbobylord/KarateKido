@@ -111,7 +111,7 @@
               justify-content: center;
               align-items: flex-end;
               img {
-                width: 200px;
+                width: 120px;
                 height: 100vh;
                 object-fit: cover;
                 object-position: top;
@@ -142,7 +142,7 @@
               justify-content: center;
               align-items: flex-end;
               img {
-                width: 200px;
+                width: 120px;
                 height: 50px;
                 object-fit: cover;
                 object-position: bottom;
@@ -154,51 +154,45 @@
             bottom: 0;
             left: 50%;
             width: 200px;
-            height: 500px;
             display: flex;
             flex-direction: column;
             justify-content: flex-end;
             align-items: center;
-            background: red;
             transform: translateX(-50%);
             z-index: 5;
             .Branch{
-              width: 250px;
-              margin-bottom: 300px;
+              position: relative;
+              margin-bottom: 220px;
               &.BranchOne{
-                background: blue;
                 display: flex;
                 flex-direction: row;
                 justify-content: flex-end;
                 align-items: center;
-                transform: translateX(-80%);
+                transform: translateX(-75%);
               }
               &.BranchTwo{
-                background: yellow;
                 display: flex;
                 flex-direction: row;
                 justify-content: flex-start;
                 align-items: center;
-                transform: translateX(80%);
+                transform: translateX(75%);
               }
               &.BranchThree{
-                background: green;
                 display: flex;
                 flex-direction: row;
                 justify-content: flex-end;
                 align-items: center;
-                transform: translateX(-80%);
+                transform: translateX(-85%);
               }
               &.BranchFour{
-                background: crimson;
                 display: flex;
                 flex-direction: row;
                 justify-content: flex-start;
                 align-items: center;
-                transform: translateX(80%);
+                transform: translateX(85%);
               }
               img{
-                height: 100%;
+                height: 40px;
               }
             }
           }
@@ -213,29 +207,41 @@
           align-items: flex-end;
           section{
             position: relative;
-            width: 500px;
-            height: 500px;
+            width: 300px;
+            height: 300px;
             display: flex;
             flex-direction: row;
             justify-content: center;
             align-items: flex-end;
             z-index: 1000;
             #Right,#Left{
-              width: 300px;
-              height: 300px;
+              width: 180px;
+              height: 180px;
               &#Right{
-                background: url('https://s19.picofile.com/file/8437708076/Right.png') center center no-repeat;
+                background: url('https://s18.picofile.com/file/8438061268/Right.png') center center no-repeat;
                 background-size: 80%;
                 animation: RightBackground 200ms forwards linear normal;
               }
               &#Left{
-                background: url('https://s18.picofile.com/file/8437708050/Left.png') center center no-repeat;
+                background: url('https://s19.picofile.com/file/8438061284/Left.png') center center no-repeat;
                 background-size: 80%;
                 animation: LeftBackground 200ms forwards linear normal;
               }
               &.Disable{
                 display: none;
               }
+            }
+          }
+          .Dead{
+            position: absolute;
+            background-color: blue;
+            width: 300px;
+            height: 150px;
+            background: url('https://s19.picofile.com/file/8438061300/Dead.png') center bottom no-repeat;
+            background-size: 80%;
+            transform: translateX(-20px);
+            &.Disable{
+              display: none;
             }
           }
         }
@@ -284,16 +290,17 @@
     background: url('https://s19.picofile.com/file/8437708076/Right.png') center center no-repeat;
     background-size: 80%;
   } 25%, 75%, 69%{
-    background: url('https://s19.picofile.com/file/8437708068/Right_Strike.png') center center no-repeat;
+    background: url('https://s19.picofile.com/file/8438061276/Right_Strike.png') center center no-repeat;
     background-size: 80%;
   }
 }
+
 @keyframes LeftBackground{
   0%, 24%, 76%, 100%{
     background: url('https://s18.picofile.com/file/8437708050/Left.png') center center no-repeat;
     background-size: 80%;
   } 25%, 75%, 69%{
-    background: url('https://s18.picofile.com/file/8437708034/Left_Strike.png') center center no-repeat;
+    background: url('https://s19.picofile.com/file/8438061292/Left_Strike.png') center center no-repeat;
     background-size: 80%;
   }
 }
