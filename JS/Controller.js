@@ -19,6 +19,8 @@ function addElement () {
 
         const newDiv = document.createElement("div");
         
+        newDiv.style.order = `-${Branch}`
+
         const newContent = document.createElement("img");
         
         if(BranchNumber == 1){
