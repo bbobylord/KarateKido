@@ -89,38 +89,38 @@
         align-items: center;
         z-index: 7;
         transform: translateY(-100px);
-        .TreeDecreasing {
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          display: flex;
-          flex-direction: row;
-          justify-content: center;
-          align-items: center;
-          background-size: 50% 900%;
-          z-index: 4;
-          .Cover {
-            position: relative;
-            width: 100vw;
-            height: 100vh;
+        .Tree{
+          .TreeDecreasing {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
             display: flex;
             flex-direction: row;
             justify-content: center;
-            align-items: flex-end;
-            img {
-              width: 200px;
+            align-items: center;
+            background-size: 50% 900%;
+            z-index: 4;
+            .Cover {
+              position: relative;
+              width: 100vw;
               height: 100vh;
-              object-fit: cover;
-              object-position: top;
+              display: flex;
+              flex-direction: row;
+              justify-content: center;
+              align-items: flex-end;
+              img {
+                width: 200px;
+                height: 100vh;
+                object-fit: cover;
+                object-position: top;
+              }
+            }
+            &.Talk{
+              transform: translateY(-20px);
             }
           }
-          &.Talk{
-            transform: translateY(-20px);
-          }
-        }
-        .Tree{
           .TreeFixed {
             position: absolute;
             top: 0;
@@ -146,6 +146,59 @@
                 height: 50px;
                 object-fit: cover;
                 object-position: bottom;
+              }
+            }
+          }
+          .AllBranch{
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 200px;
+            height: 500px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: center;
+            background: red;
+            transform: translateX(-50%);
+            z-index: 5;
+            .Branch{
+              width: 250px;
+              margin-bottom: 300px;
+              &.BranchOne{
+                background: blue;
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-end;
+                align-items: center;
+                transform: translateX(-80%);
+              }
+              &.BranchTwo{
+                background: yellow;
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+                align-items: center;
+                transform: translateX(80%);
+              }
+              &.BranchThree{
+                background: green;
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-end;
+                align-items: center;
+                transform: translateX(-80%);
+              }
+              &.BranchFour{
+                background: crimson;
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+                align-items: center;
+                transform: translateX(80%);
+              }
+              img{
+                height: 100%;
               }
             }
           }

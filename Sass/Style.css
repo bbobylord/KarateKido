@@ -149,7 +149,7 @@
           transform: translateY(-100px);
 }
 
-* body main .OK .TreeDecreasing {
+* body main .OK .Tree .TreeDecreasing {
   position: absolute;
   top: 0;
   left: 0;
@@ -172,7 +172,7 @@
   z-index: 4;
 }
 
-* body main .OK .TreeDecreasing .Cover {
+* body main .OK .Tree .TreeDecreasing .Cover {
   position: relative;
   width: 100vw;
   height: 100vh;
@@ -191,7 +191,7 @@
           align-items: flex-end;
 }
 
-* body main .OK .TreeDecreasing .Cover img {
+* body main .OK .Tree .TreeDecreasing .Cover img {
   width: 200px;
   height: 100vh;
   -o-object-fit: cover;
@@ -200,7 +200,7 @@
      object-position: top;
 }
 
-* body main .OK .TreeDecreasing.Talk {
+* body main .OK .Tree .TreeDecreasing.Talk {
   -webkit-transform: translateY(-20px);
           transform: translateY(-20px);
 }
@@ -254,6 +254,116 @@
      object-fit: cover;
   -o-object-position: bottom;
      object-position: bottom;
+}
+
+* body main .OK .Tree .AllBranch {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 200px;
+  height: 500px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: red;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  z-index: 5;
+}
+
+* body main .OK .Tree .AllBranch .Branch {
+  width: 250px;
+  margin-bottom: 300px;
+}
+
+* body main .OK .Tree .AllBranch .Branch.BranchOne {
+  background: blue;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transform: translateX(-80%);
+          transform: translateX(-80%);
+}
+
+* body main .OK .Tree .AllBranch .Branch.BranchTwo {
+  background: yellow;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transform: translateX(80%);
+          transform: translateX(80%);
+}
+
+* body main .OK .Tree .AllBranch .Branch.BranchThree {
+  background: green;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transform: translateX(-80%);
+          transform: translateX(-80%);
+}
+
+* body main .OK .Tree .AllBranch .Branch.BranchFour {
+  background: crimson;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transform: translateX(80%);
+          transform: translateX(80%);
+}
+
+* body main .OK .Tree .AllBranch .Branch img {
+  height: 100%;
 }
 
 * body main .OK .Character {

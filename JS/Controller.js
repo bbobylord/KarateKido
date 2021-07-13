@@ -3,7 +3,52 @@ let ReadyTime = Number(3);
 let Day = "https://s19.picofile.com/file/8437587650/Day.png"
 let Night = "https://s18.picofile.com/file/8437587668/Night.png"
 var d = new Date();
-var h = d.getHours();  
+var h = d.getHours();
+
+let Branch = Number(0);
+
+console.log();
+
+function addElement () {
+    for (let i = 0; i < 3; i++) {
+        Branch ++;
+
+        let min = Math.ceil(1);
+        let max = Math.floor(5);
+        const BranchNumber = Math.floor(Math.random() * (max - min) + min);
+
+        const newDiv = document.createElement("div");
+        
+        const newContent = document.createElement("img");
+        
+        if(BranchNumber == 1){
+
+            newDiv.classList.add("Branch", "BranchOne", `Remove${Branch}`)
+            newContent.src = "https://s18.picofile.com/file/8438039568/Big_Left.png"
+            
+        } else if(BranchNumber == 2){
+            
+            newDiv.classList.add("Branch", "BranchTwo", `Remove${Branch}`)
+            newContent.src = "https://s19.picofile.com/file/8438039576/Big_Right.png"
+            
+        } else if(BranchNumber == 3){
+            
+            newDiv.classList.add("Branch", "BranchThree", `Remove${Branch}`)
+            newContent.src = "https://s19.picofile.com/file/8438039584/Little_Left.png"
+            
+        } else if(BranchNumber == 4){
+            
+            newDiv.classList.add("Branch", "BranchFour", `Remove${Branch}`)
+            newContent.src = "https://s18.picofile.com/file/8438039592/Little_Right.png"
+            
+        }
+        
+        newDiv.appendChild(newContent);
+        
+        const currentDiv = document.getElementById("div1");
+        document.querySelector("#AllBranch").insertBefore(newDiv, currentDiv);
+    }
+}
 
 function ChangeBackground(Hour) {
     if(Hour < 19 && Hour > 7){
@@ -19,8 +64,9 @@ setInterval(() => {
 }, 1000);
 
 function Start() {
-
+    
     if(ReadyTime >= 1){
+        addElement();
         setTimeout(() => {
             ReadyTime --;
             document.getElementById("Ready").innerHTML = ReadyTime;
@@ -52,6 +98,7 @@ function TimeOut() {
     document.querySelector("#End").classList.remove("Disable");
 
     document.onkeydown = null;
+    Time = 0;
     } else {
         LowDamage();
     }
