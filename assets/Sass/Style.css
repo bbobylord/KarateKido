@@ -1,0 +1,545 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+* body {
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+}
+
+* body main {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-size: cover;
+}
+
+* body main header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: calc(100% - calc(10px * 2));
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 5px 10px;
+  z-index: 10;
+}
+
+* body main header .Time {
+  position: relative;
+  width: 300px;
+  height: 25px;
+  background: red;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+* body main header .Time .Label {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 1.1em;
+  font-weight: bold;
+}
+
+* body main header .Time .Damage {
+  width: 100%;
+  height: 100%;
+  background: green;
+  -webkit-transition: width 1000ms ease-in-out;
+  transition: width 1000ms ease-in-out;
+}
+
+* body main header .Score {
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+* body main header .Score .Record,
+* body main header .Score .Start {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+* body main header .Score .Record.Disable,
+* body main header .Score .Start.Disable {
+  display: none;
+}
+
+* body main .Ready,
+* body main .End {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-size: 10em;
+  color: #fff;
+  z-index: 8;
+}
+
+* body main .Ready.Disable,
+* body main .End.Disable {
+  display: none;
+}
+
+* body main .Ready.End,
+* body main .End.End {
+  -webkit-animation: Scale 500ms forwards linear normal;
+          animation: Scale 500ms forwards linear normal;
+}
+
+* body main .OK {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 7;
+  -webkit-transform: translateY(-100px);
+          transform: translateY(-100px);
+}
+
+* body main .OK .Tree .TreeDecreasing {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-size: 50% 900%;
+  z-index: 4;
+}
+
+* body main .OK .Tree .TreeDecreasing .Cover {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+* body main .OK .Tree .TreeDecreasing .Cover img {
+  width: 120px;
+  height: 100vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
+}
+
+* body main .OK .Tree .TreeDecreasing.Talk {
+  -webkit-transform: translateY(-20px);
+          transform: translateY(-20px);
+}
+
+* body main .OK .Tree .TreeFixed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-size: 50% 900%;
+  z-index: 5;
+}
+
+* body main .OK .Tree .TreeFixed .Cover {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+* body main .OK .Tree .TreeFixed .Cover img {
+  width: 120px;
+  height: 50px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: bottom;
+     object-position: bottom;
+}
+
+* body main .OK .Tree .AllBranch {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  z-index: 5;
+}
+
+* body main .OK .Tree .AllBranch .Branch {
+  position: relative;
+  margin-bottom: 220px;
+}
+
+* body main .OK .Tree .AllBranch .Branch.BranchOne {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transform: translateX(-75%);
+          transform: translateX(-75%);
+}
+
+* body main .OK .Tree .AllBranch .Branch.BranchTwo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transform: translateX(75%);
+          transform: translateX(75%);
+}
+
+* body main .OK .Tree .AllBranch .Branch.BranchThree {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transform: translateX(-85%);
+          transform: translateX(-85%);
+}
+
+* body main .OK .Tree .AllBranch .Branch.BranchFour {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transform: translateX(85%);
+          transform: translateX(85%);
+}
+
+* body main .OK .Tree .AllBranch .Branch img {
+  height: 40px;
+}
+
+* body main .OK .Character {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+* body main .OK .Character section {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  z-index: 1000;
+}
+
+* body main .OK .Character section #Right, * body main .OK .Character section #Left {
+  width: 180px;
+  height: 180px;
+}
+
+* body main .OK .Character section #Right#Right, * body main .OK .Character section #Left#Right {
+  background: url("https://s18.picofile.com/file/8438061268/Right.png") center center no-repeat;
+  background-size: 80%;
+  -webkit-animation: RightBackground 200ms forwards linear normal;
+          animation: RightBackground 200ms forwards linear normal;
+}
+
+* body main .OK .Character section #Right#Left, * body main .OK .Character section #Left#Left {
+  background: url("https://s19.picofile.com/file/8438061284/Left.png") center center no-repeat;
+  background-size: 80%;
+  -webkit-animation: LeftBackground 200ms forwards linear normal;
+          animation: LeftBackground 200ms forwards linear normal;
+}
+
+* body main .OK .Character section #Right.Disable, * body main .OK .Character section #Left.Disable {
+  display: none;
+}
+
+* body main .OK .Character .Dead {
+  position: absolute;
+  background-color: blue;
+  width: 300px;
+  height: 150px;
+  background: url("https://s19.picofile.com/file/8438061300/Dead.png") center bottom no-repeat;
+  background-size: 80%;
+  -webkit-transform: translateX(-20px);
+          transform: translateX(-20px);
+}
+
+* body main .OK .Character .Dead.Disable {
+  display: none;
+}
+
+* body main .Controller {
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  opacity: 0;
+  z-index: 9;
+}
+
+* body main .Controller span {
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  width: 50%;
+  height: 100%;
+}
+
+* body main .Controller span:nth-child(1) {
+  background: #00df2d;
+}
+
+* body main .Controller span:nth-child(2) {
+  background: yellow;
+}
+
+* body main .Controller span.Disable {
+  display: none;
+}
+
+@-webkit-keyframes Scale {
+  from {
+    -webkit-transform: translate(-50%, -50%) scale(0);
+            transform: translate(-50%, -50%) scale(0);
+  }
+  to {
+    -webkit-transform: translate(-50%, -50%) scale(1);
+            transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+@keyframes Scale {
+  from {
+    -webkit-transform: translate(-50%, -50%) scale(0);
+            transform: translate(-50%, -50%) scale(0);
+  }
+  to {
+    -webkit-transform: translate(-50%, -50%) scale(1);
+            transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+@-webkit-keyframes RightBackground {
+  0%, 24%, 76%, 100% {
+    background: url("https://s18.picofile.com/file/8438061268/Right.png") center center no-repeat;
+    background-size: 80%;
+  }
+  25%, 75%, 69% {
+    background: url("https://s19.picofile.com/file/8438061276/Right_Strike.png") center center no-repeat;
+    background-size: 80%;
+  }
+}
+
+@keyframes RightBackground {
+  0%, 24%, 76%, 100% {
+    background: url("https://s18.picofile.com/file/8438061268/Right.png") center center no-repeat;
+    background-size: 80%;
+  }
+  25%, 75%, 69% {
+    background: url("https://s19.picofile.com/file/8438061276/Right_Strike.png") center center no-repeat;
+    background-size: 80%;
+  }
+}
+
+@-webkit-keyframes LeftBackground {
+  0%, 24%, 76%, 100% {
+    background: url("https://s19.picofile.com/file/8438061284/Left.png") center center no-repeat;
+    background-size: 80%;
+  }
+  25%, 75%, 69% {
+    background: url("https://s19.picofile.com/file/8438061292/Left_Strike.png") center center no-repeat;
+    background-size: 80%;
+  }
+}
+
+@keyframes LeftBackground {
+  0%, 24%, 76%, 100% {
+    background: url("https://s19.picofile.com/file/8438061284/Left.png") center center no-repeat;
+    background-size: 80%;
+  }
+  25%, 75%, 69% {
+    background: url("https://s19.picofile.com/file/8438061292/Left_Strike.png") center center no-repeat;
+    background-size: 80%;
+  }
+}
+/*# sourceMappingURL=Style.css.map */
