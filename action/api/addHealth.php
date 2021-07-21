@@ -1,27 +1,22 @@
 <?php
+
 header('Content-Type: application/json');
 include '../../dataBase/userClass.php';
 
 if (
     isset($_REQUEST["token"]) && $_REQUEST["token"] != "" &&
-    isset($_REQUEST["point"]) && $_REQUEST["point"] != ""
+    isset($_REQUEST["health"]) && $_REQUEST["health"] != ""
 
 ) {
 
     $query = new User();
     $token = $_REQUEST["token"];
-    $point = $_REQUEST["point"];
-    $bestPoint = 0;
-    $helthNow = 0;
-    $response = [];
-    $user = $query->getUserBytoken($token);
+    $health = $_REQUEST["health"];
+    $user= $query->getUserBytoken($token);
+    $newHealth = $health +$user['health'];
 
 
-    $bestPoint = $user['point'] > $point ? $user['point'] : $point;
-    $bestWeekPoint =$user['weekPoint']  > $point ? $user['weekPoint'] : $point;
-    $helthNow = $user['health'] - 1;
-
-    if ($query->changePoint($token, $bestPoint, $helthNow,$bestWeekPoint)) {
+    if ($query->addHealth($token, $newHealth)) {
         $response = [
             "result" => true,
         ];

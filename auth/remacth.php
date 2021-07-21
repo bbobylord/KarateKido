@@ -37,15 +37,17 @@ $me = $query->getUserBytoken($_SESSION['token']);
                         <th scope="col">#</th>
                         <th scope="col">username</th>
                         <th scope="col">point</th>
+                        <th scope="col">week</th>
 
                     </tr>
                     </thead>
                     <tbody>
                     <?php foreach ($users as $user){ ?>
-                    <tr>
+                    <tr style="<?= $user['username']== $me['username'] ? 'background-color: antiquewhite' : ''?>">
                         <th scope="row"><?= $count++ ?></th>
                         <td><?= $user['username'] ?></td>
                         <td><?= $user['point'] ?></td>
+                        <td><?= $user['weekPoint'] ?></td>
 
                     </tr>
                     <?php } ?>
@@ -54,6 +56,7 @@ $me = $query->getUserBytoken($_SESSION['token']);
                         <th scope="row">ME</th>
                         <td><?= $me['username'] ?></td>
                         <td><?= $me['point'] ?></td>
+                        <td><?= $me['weekPoint'] ?></td>
 
                     </tr>
                     </tbody>

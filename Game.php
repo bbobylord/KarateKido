@@ -6,12 +6,14 @@ $query=new User();
 
 if (!$_SESSION['token'] ){
    header('location:auth/login.php');
-
 }
 $token=$_SESSION['token'] ;
 $username=$_SESSION['username'] ;
 $user= $query->getUser($username);
-//var_dump($user);
+
+if ($user['health'] <= 0  ){
+    header('location:auth/payment.php');
+}
 
 ?>
 <!DOCTYPE html>
@@ -35,6 +37,7 @@ $user= $query->getUser($username);
                 </div>
                 <div id="Score" class="Score">
                     <div id="point" class="" value="<?= $user['point'] ?>">ponit : <?= $user['point'] ?></div>
+                    <div id="point" class="" value="<?= $user['weekPoint'] ?>">weekPoint : <?= $user['weekPoint'] ?></div>
                     <div id="health" class="" value="<?= $user['health'] ?>">health : <?= $user['health'] ?></div>
                     <h3 id="Start" class="Start">Start</h3>
                     <h3 id="Record" class="Record Disable">0</h3>

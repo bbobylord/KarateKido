@@ -207,8 +207,7 @@ function RemoveElement() {
 
 async function Lost() {
 
-    const Record = Number(document.getElementById("Record").innerHTML);
-    const tokenUser = localStorage.getItem('token');
+
 
 
     document.querySelector(".Character #Right").classList.add("Disable");
@@ -228,7 +227,17 @@ async function Lost() {
         9999999999999999999999999999999 + 9999999999999999999999999999999
     );
 
+    /// Erfan changed
+    /// send api to php server
+    /// send token user and point To serer
+    sendApiAfterEndGame()
 
+
+}
+
+async function sendApiAfterEndGame (){
+    const Record = Number(document.getElementById("Record").innerHTML);
+    const tokenUser = localStorage.getItem('token');
     const rawResponse = await fetch(baseUrl + `/action/api/changePoint.php?token=${tokenUser}&point=${Record}`);
     const res = await rawResponse.json();
 
@@ -237,7 +246,6 @@ async function Lost() {
 
     },1500)
 }
-
 
 function saveToken() {
     const divToken = document.querySelector("#token");

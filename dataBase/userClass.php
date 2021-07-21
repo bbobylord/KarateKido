@@ -102,12 +102,13 @@ class User  {
     }
 
     /// change point and helth
-    public  function changePoint ($token,$point,$health){
-        $fetch_sql = "UPDATE `users` SET `point`=? ,`health`=?  WHERE `token`= ? ";
+    public  function changePoint ($token,$point,$health,$bestWeekPoint){
+        $fetch_sql = "UPDATE `users` SET `point`=?,`weekPoint`=? ,`health`=?  WHERE `token`= ? ";
         $fetch_res = $this->connect->prepare($fetch_sql);
         $fetch_res->bindvalue(1, $point);
-        $fetch_res->bindvalue(2, $health);
-        $fetch_res->bindvalue(3, $token);
+        $fetch_res->bindvalue(2, $bestWeekPoint);
+        $fetch_res->bindvalue(3, $health);
+        $fetch_res->bindvalue(4, $token);
 
         if ($fetch_res->execute()) {
             return true;
@@ -126,6 +127,21 @@ class User  {
         }else{
             return  false;
         }
+    }
+
+    /// add health
+    public function addHealth ($token,$health){
+        $fetch_sql = "UPDATE `users` SET `health`=?  WHERE `token`= ? ";
+        $fetch_res = $this->connect->prepare($fetch_sql);
+        $fetch_res->bindvalue(1, $health);
+        $fetch_res->bindvalue(2, $token);
+
+        if ($fetch_res->execute()) {
+            return true;
+        }else{
+            return  false;
+        }
+
     }
 }
 
