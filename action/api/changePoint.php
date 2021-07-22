@@ -7,7 +7,7 @@ if (
     isset($_REQUEST["point"]) && $_REQUEST["point"] != ""
 
 ) {
-
+///tesr
     
     $query = new User();
     $token = $_REQUEST["token"];
