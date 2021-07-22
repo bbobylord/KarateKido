@@ -8,6 +8,7 @@ if (
 
 ) {
 
+    
     $query = new User();
     $token = $_REQUEST["token"];
     $point = $_REQUEST["point"];
