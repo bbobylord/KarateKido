@@ -60,12 +60,13 @@ class User  {
 
     /// check exsit user for login
     public  function  checkForLogin ($username,$password){
-        $fetch_sql = "SELECT * FROM `users` WHERE `username`= ? AND  `passowrd` = ?";
+
+        $fetch_sql = "SELECT * FROM `users` WHERE `username`= ? AND password=?";
         $fetch_res = $this->connect->prepare($fetch_sql);
         $fetch_res->bindvalue(1, $username);
         $fetch_res->bindvalue(2, $password);
         $fetch_res->execute();
-        if ($fetch_res->fetch(PDO::FETCH_ASSOC)) {
+        if ($fetch_res->fetch()) {
             return true;
         }else{
             return  false;

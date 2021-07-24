@@ -46,7 +46,7 @@ $user= $query->getUserBytoken($_SESSION['token']);
 
                     </div>
 
-
+                    <input hidden id="token" name="token" data-id="<?=$_SESSION["token"] ?>">
                     <div class="container-login100-form-btn">
                         <button type="button" class="btn btn-primary btn-lg " id="btnPay" onClick="addPayment()">پرداخت</button>
                     </div>
@@ -57,7 +57,11 @@ $user= $query->getUserBytoken($_SESSION['token']);
         </div>
     </div>
 
-
+<script>
+    const divToken = document.querySelector("#token");
+    const token =divToken.dataset.id
+    localStorage.setItem('token',token)
+</script>
     <script src="../assets/js/paymentController.js">
 
     </script>

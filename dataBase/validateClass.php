@@ -48,7 +48,10 @@ class validateClass
     public function validationLoginuser($username, $password)
     {
         $mesError = [];
-        if($this->querys->checkForLogin($username,$password)){
+
+
+
+        if(!$this->querys->checkForLogin($username,$password)){
             array_push($mesError, 'نام کاربری یا رمز عبور صحیح نمی باشد ، مجددا تلاش کنید');
         }
 

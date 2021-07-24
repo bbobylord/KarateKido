@@ -28,7 +28,7 @@ const checkPayment = () => {
 ////
 ///// add payement in payment.php
 const addPayment  =async ()=>{
-    var baseUrl = 'http://localhost:8080/game';
+    var baseUrl = `${window.location.origin}`;
     const tokenUser = localStorage.getItem('token');
     const num_health = document.querySelector("#num_health").value
 
@@ -36,11 +36,11 @@ const addPayment  =async ()=>{
         return alert('ابتدا تعداد را مشخص کنید')
     }
 
-    const rawResponse = await fetch(baseUrl + `/action/api/addhealth.php?token=${tokenUser}&health=${num_health}`);
+    const rawResponse = await fetch(baseUrl + `/action/api/addHealth.php?token=${tokenUser}&health=${num_health}`);
     const res = await rawResponse.json();
     console.log(res.result == true)
     if (res.result == true){
-        window.location.replace(baseUrl + `/game.php`)
+        window.location.replace(baseUrl + `/index.php`)
     }
 
 }

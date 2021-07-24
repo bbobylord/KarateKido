@@ -1,5 +1,5 @@
 <?php
-include '../../utils/blockInjection.php';
+
 include '../../dataBase/userClass.php';
 include '../../dataBase/validateClass.php';
 session_start();
@@ -21,22 +21,22 @@ if (
     $password = md5($_POST['password']);
     $token = md5($userName .$randomNumber. $phone . $firstName.$randomNumber);
 
-    var_dump($phone);
+
     $error = $validate->validateAddUser($userName, $phone, $password);
     if (count($error) > 0){
-        return header('Location: /game/auth/register.php?error='. json_encode($error));
+        return header('Location: /auth/register.php?error='. json_encode($error));
     }
 
     if ($query->adduser($userName, $phone, $firstName, $lastName, $password,$token)) {
         $_SESSION["token"] = $token;
         $_SESSION["username"] = $userName;
         $_SESSION["phone"] = $phone;
-        return header('Location: /game/auth/doneRegister.php');
+        return header('Location: /auth/doneRegister.php');
 
     }
 } else {
     $error =['پرکردن تمامی فیلد ها اجباری است'];
-    return header('Location: /game/auth/register.php?error='. json_encode($error));
+    return header('Location: /auth/register.php?error='. json_encode($error));
 
 
 }

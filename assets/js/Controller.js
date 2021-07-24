@@ -4,7 +4,7 @@ let Day = "https://s19.picofile.com/file/8437587650/Day.png";
 let Night = "https://s18.picofile.com/file/8437587668/Night.png";
 var d = new Date();
 var h = d.getHours();
-var baseUrl = 'http://localhost:8080/game';
+var baseUrl = `${window.location.origin}`;
 
 let Branch = Number(0);
 let ClickKey = Number(0);

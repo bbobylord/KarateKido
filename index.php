@@ -5,14 +5,14 @@ $query=new User();
 
 
 if (!$_SESSION['token'] ){
-   header('location:auth/login.php');
+  return header('location:auth/login.php');
 }
 $token=$_SESSION['token'] ;
 $username=$_SESSION['username'] ;
 $user= $query->getUser($username);
 
 if ($user['health'] <= 0  ){
-    header('location:auth/payment.php');
+    return    header('location:auth/payment.php');
 }
 
 ?>
@@ -70,11 +70,18 @@ if ($user['health'] <= 0  ){
                     </section>
                 </div>
             </section>
-            <section class="Controller">
+        <input hidden id="token" name="token" data-id="<?=$_SESSION["token"] ?>">
+
+        <section class="Controller">
                 <span class="Btn Btn-Left Disable" id="Btn_Left" onclick="Strick('Left');"></span>
                 <span class="Btn Btn-Right Disable" id="Btn_Right" onclick="Strick('Right');"></span>
             </section>
         </section>
     </main>
 </body>
+<script>
+    const divToken = document.querySelector("#token");
+    const token =divToken.dataset.id
+    localStorage.setItem('token',token)
+</script>
 </html>

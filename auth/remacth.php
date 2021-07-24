@@ -61,7 +61,8 @@ $me = $query->getUserBytoken($_SESSION['token']);
                     </tr>
                     </tbody>
                 </table>
-                <a href="../Game.php" type="button" class="btn btn-success btn-lg btn-block">شروع مجدد بازی </a>
+                <a href="../index.php" type="button" class="btn btn-success btn-lg btn-block">شروع مجدد بازی </a>
+                <a href="../action/user/logout.php" type="button" class="btn btn-danger btn-lg btn-block">خروج </a>
                 <input hidden id="token" name="token" data-id="<?= $_SESSION["token"] ?>">
             </form>
         </div>

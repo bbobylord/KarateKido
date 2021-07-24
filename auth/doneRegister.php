@@ -18,7 +18,7 @@ session_start();
                 </span>
 
 
-                    <a href="../Game.php" type="button" class="btn btn-success btn-lg btn-block">برای ورود به بازی کلیک کنید</a>
+                    <a href="../index.php" type="button" class="btn btn-success btn-lg btn-block">برای ورود به بازی کلیک کنید</a>
                     <input hidden id="token" name="token" data-id="<?=$_SESSION["token"] ?>">
                 </form>
             </div>

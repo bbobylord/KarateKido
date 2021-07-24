@@ -1,5 +1,5 @@
 <?php
-include '../../utils/blockInjection.php';
+
 include '../../dataBase/userClass.php';
 include '../../dataBase/validateClass.php';
 session_start();
@@ -17,21 +17,22 @@ if (
 
 
     $error = $validate->validationLoginuser($userName, $password);
+
     if (count($error) > 0) {
-        return header('Location: /game/auth/login.php?error=' . json_encode($error));
+        return header('Location: /auth/login.php?error=' . json_encode($error));
     } else {
        $user = $query-> getUser($userName);
         $_SESSION["token"] = $user['token'];
         $_SESSION["username"] = $user['username'];
         $_SESSION["phone"] = $user['phone'];
-        return header('Location: ../../Game.php');
+        return header('Location: ../../index.php');
 
 
     }
 
 } else {
     $error = ['پرکردن تمامی فیلد ها اجباری است'];
-    return header('Location: /game/auth/login.php?error=' . json_encode($error));
+    return header('Location: /auth/login.php?error=' . json_encode($error));
 
 
 }
