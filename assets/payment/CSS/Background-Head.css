@@ -1,0 +1,138 @@
+.container .card:nth-child(10) .head,
+.container .card:nth-child(20) .head,
+.container .card:nth-child(30) .head,
+.container .card:nth-child(40) .head,
+.container .card:nth-child(50) .head,
+.container .card:nth-child(60) .head,
+.container .card:nth-child(70) .head,
+.container .card:nth-child(80) .head,
+.container .card:nth-child(90) .head,
+.container .card:nth-child(100) .head
+{
+    background: #DD70A6;
+}
+
+.container .card:nth-child(9) .head,
+.container .card:nth-child(19) .head,
+.container .card:nth-child(29) .head,
+.container .card:nth-child(39) .head,
+.container .card:nth-child(49) .head,
+.container .card:nth-child(59) .head,
+.container .card:nth-child(69) .head,
+.container .card:nth-child(79) .head,
+.container .card:nth-child(89) .head,
+.container .card:nth-child(99) .head
+{
+    background: #FF595E;
+}
+
+.container .card:nth-child(8) .head,
+.container .card:nth-child(18) .head,
+.container .card:nth-child(28) .head,
+.container .card:nth-child(38) .head,
+.container .card:nth-child(48) .head,
+.container .card:nth-child(58) .head,
+.container .card:nth-child(68) .head,
+.container .card:nth-child(78) .head,
+.container .card:nth-child(88) .head,
+.container .card:nth-child(98) .head
+{
+    background: #2A9D8F;
+}
+
+.container .card:nth-child(7) .head,
+.container .card:nth-child(17) .head,
+.container .card:nth-child(27) .head,
+.container .card:nth-child(37) .head,
+.container .card:nth-child(47) .head,
+.container .card:nth-child(57) .head,
+.container .card:nth-child(67) .head,
+.container .card:nth-child(77) .head,
+.container .card:nth-child(87) .head,
+.container .card:nth-child(97) .head
+{
+    background: #0066FF;
+}
+
+.container .card:nth-child(6) .head,
+.container .card:nth-child(16) .head,
+.container .card:nth-child(26) .head,
+.container .card:nth-child(36) .head,
+.container .card:nth-child(46) .head,
+.container .card:nth-child(56) .head,
+.container .card:nth-child(66) .head,
+.container .card:nth-child(76) .head,
+.container .card:nth-child(86) .head,
+.container .card:nth-child(96) .head
+{
+    background: #DA2268;
+}
+
+.container .card:nth-child(5) .head,
+.container .card:nth-child(15) .head,
+.container .card:nth-child(25) .head,
+.container .card:nth-child(35) .head,
+.container .card:nth-child(45) .head,
+.container .card:nth-child(55) .head,
+.container .card:nth-child(65) .head,
+.container .card:nth-child(75) .head,
+.container .card:nth-child(85) .head,
+.container .card:nth-child(95) .head
+{
+    background: #6A4C93;
+}
+
+.container .card:nth-child(4) .head,
+.container .card:nth-child(14) .head,
+.container .card:nth-child(24) .head,
+.container .card:nth-child(34) .head,
+.container .card:nth-child(44) .head,
+.container .card:nth-child(54) .head,
+.container .card:nth-child(64) .head,
+.container .card:nth-child(74) .head,
+.container .card:nth-child(84) .head,
+.container .card:nth-child(94) .head
+{
+    background: #E76D51;
+}
+
+.container .card:nth-child(3) .head,
+.container .card:nth-child(13) .head,
+.container .card:nth-child(23) .head,
+.container .card:nth-child(33) .head,
+.container .card:nth-child(43) .head,
+.container .card:nth-child(53) .head,
+.container .card:nth-child(63) .head,
+.container .card:nth-child(73) .head,
+.container .card:nth-child(83) .head,
+.container .card:nth-child(93) .head
+{
+    background: #FFAF00;
+}
+
+.container .card:nth-child(2) .head,
+.container .card:nth-child(12) .head,
+.container .card:nth-child(22) .head,
+.container .card:nth-child(32) .head,
+.container .card:nth-child(42) .head,
+.container .card:nth-child(52) .head,
+.container .card:nth-child(62) .head,
+.container .card:nth-child(72) .head,
+.container .card:nth-child(82) .head,
+.container .card:nth-child(92) .head{
+    background: #9477c9;
+}
+
+.container .card:nth-child(1) .head,
+.container .card:nth-child(11) .head,
+.container .card:nth-child(21) .head,
+.container .card:nth-child(31) .head,
+.container .card:nth-child(41) .head,
+.container .card:nth-child(51) .head,
+.container .card:nth-child(61) .head,
+.container .card:nth-child(71) .head,
+.container .card:nth-child(81) .head,
+.container .card:nth-child(91) .head
+{
+    background: #80A1D4;
+}

@@ -1,0 +1,159 @@
+.container .card:nth-child(10) .content a:hover,
+.container .card:nth-child(20) .content a:hover,
+.container .card:nth-child(30) .content a:hover,
+.container .card:nth-child(40) .content a:hover,
+.container .card:nth-child(50) .content a:hover,
+.container .card:nth-child(60) .content a:hover,
+.container .card:nth-child(70) .content a:hover,
+.container .card:nth-child(80) .content a:hover,
+.container .card:nth-child(90) .content a:hover,
+.container .card:nth-child(100) .content a:hover
+{
+    background: #DD70A6;
+    color: #fafafa;
+    transition: 200ms;
+}
+
+.container .card:nth-child(9) .content a:hover,
+.container .card:nth-child(19) .content a:hover,
+.container .card:nth-child(29) .content a:hover,
+.container .card:nth-child(39) .content a:hover,
+.container .card:nth-child(49) .content a:hover,
+.container .card:nth-child(59) .content a:hover,
+.container .card:nth-child(69) .content a:hover,
+.container .card:nth-child(79) .content a:hover,
+.container .card:nth-child(89) .content a:hover,
+.container .card:nth-child(99) .content a:hover
+{
+    background: #FF595E;
+    color: #fafafa;
+    transition: 200ms;
+}
+
+.container .card:nth-child(8) .content a:hover,
+.container .card:nth-child(18) .content a:hover,
+.container .card:nth-child(28) .content a:hover,
+.container .card:nth-child(38) .content a:hover,
+.container .card:nth-child(48) .content a:hover,
+.container .card:nth-child(58) .content a:hover,
+.container .card:nth-child(68) .content a:hover,
+.container .card:nth-child(78) .content a:hover,
+.container .card:nth-child(88) .content a:hover,
+.container .card:nth-child(98) .content a:hover
+{
+    background: #2A9D8F;
+    color: #fafafa;
+    transition: 200ms;
+}
+
+.container .card:nth-child(7) .content a:hover,
+.container .card:nth-child(17) .content a:hover,
+.container .card:nth-child(27) .content a:hover,
+.container .card:nth-child(37) .content a:hover,
+.container .card:nth-child(47) .content a:hover,
+.container .card:nth-child(57) .content a:hover,
+.container .card:nth-child(67) .content a:hover,
+.container .card:nth-child(77) .content a:hover,
+.container .card:nth-child(87) .content a:hover,
+.container .card:nth-child(97) .content a:hover
+{
+    background: #0066FF;
+    color: #fafafa;
+    transition: 200ms;
+}
+
+.container .card:nth-child(6) .content a:hover,
+.container .card:nth-child(16) .content a:hover,
+.container .card:nth-child(26) .content a:hover,
+.container .card:nth-child(36) .content a:hover,
+.container .card:nth-child(46) .content a:hover,
+.container .card:nth-child(56) .content a:hover,
+.container .card:nth-child(66) .content a:hover,
+.container .card:nth-child(76) .content a:hover,
+.container .card:nth-child(86) .content a:hover,
+.container .card:nth-child(96) .content a:hover
+{
+    background: #DA2268;
+    color: #fafafa;
+    transition: 200ms;
+}
+
+.container .card:nth-child(5) .content a:hover,
+.container .card:nth-child(15) .content a:hover,
+.container .card:nth-child(25) .content a:hover,
+.container .card:nth-child(35) .content a:hover,
+.container .card:nth-child(45) .content a:hover,
+.container .card:nth-child(55) .content a:hover,
+.container .card:nth-child(65) .content a:hover,
+.container .card:nth-child(75) .content a:hover,
+.container .card:nth-child(85) .content a:hover,
+.container .card:nth-child(95) .content a:hover
+{
+    background: #6A4C93;
+    color: #fafafa;
+    transition: 200ms;
+}
+
+.container .card:nth-child(4) .content a:hover,
+.container .card:nth-child(14) .content a:hover,
+.container .card:nth-child(24) .content a:hover,
+.container .card:nth-child(34) .content a:hover,
+.container .card:nth-child(44) .content a:hover,
+.container .card:nth-child(54) .content a:hover,
+.container .card:nth-child(64) .content a:hover,
+.container .card:nth-child(74) .content a:hover,
+.container .card:nth-child(84) .content a:hover,
+.container .card:nth-child(94) .content a:hover
+{
+    background: #E76D51;
+    color: #fafafa;
+    transition: 200ms;
+}
+
+.container .card:nth-child(3) .content a:hover,
+.container .card:nth-child(13) .content a:hover,
+.container .card:nth-child(23) .content a:hover,
+.container .card:nth-child(33) .content a:hover,
+.container .card:nth-child(43) .content a:hover,
+.container .card:nth-child(53) .content a:hover,
+.container .card:nth-child(63) .content a:hover,
+.container .card:nth-child(73) .content a:hover,
+.container .card:nth-child(83) .content a:hover,
+.container .card:nth-child(93) .content a:hover
+{
+    background: #FFAF00;
+    color: #fafafa;
+    transition: 200ms;
+}
+
+.container .card:nth-child(2) .content a:hover,
+.container .card:nth-child(12) .content a:hover,
+.container .card:nth-child(22) .content a:hover,
+.container .card:nth-child(32) .content a:hover,
+.container .card:nth-child(42) .content a:hover,
+.container .card:nth-child(52) .content a:hover,
+.container .card:nth-child(62) .content a:hover,
+.container .card:nth-child(72) .content a:hover,
+.container .card:nth-child(82) .content a:hover,
+.container .card:nth-child(92) .content a:hover
+{
+    background: #9477c9;
+    color: #fafafa;
+    transition: 200ms;
+}
+
+.container .card:nth-child(1) .content a:hover,
+.container .card:nth-child(11) .content a:hover,
+.container .card:nth-child(21) .content a:hover,
+.container .card:nth-child(31) .content a:hover,
+.container .card:nth-child(41) .content a:hover,
+.container .card:nth-child(51) .content a:hover,
+.container .card:nth-child(61) .content a:hover,
+.container .card:nth-child(71) .content a:hover,
+.container .card:nth-child(81) .content a:hover,
+.container .card:nth-child(91) .content a:hover
+{
+    background: #80A1D4;
+    color: #fafafa;
+    transition: 200ms;
+}
