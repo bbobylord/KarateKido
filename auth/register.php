@@ -46,7 +46,7 @@ include('layout/header.php');
                         <input class="input100" type="tel" name="phone" placeholder="شماره موبایل" autocomplete="false>
                         <span class="focus-input100"></span>
                         <span class="symbol-input100">
-                        <i class="fa fa-lock" aria-hidden="true"></i>
+                        <i class="fa fa-mobile" aria-hidden="true"></i>
                     </span>
                     </div>
 
@@ -54,7 +54,7 @@ include('layout/header.php');
                         <input class="input100" type="text" name="firstName" placeholder="نام" autocomplete="false>
                         <span class="focus-input100"></span>
                         <span class="symbol-input100">
-                        <i class="fa fa-lock" aria-hidden="true"></i>
+                        <i class="fa fa-user" aria-hidden="true"></i>
                     </span>
                     </div>
 
@@ -62,7 +62,7 @@ include('layout/header.php');
                         <input class="input100" type="text" name="lastName" placeholder="نام خانوادگی" autocomplete="false>
                         <span class="focus-input100"></span>
                         <span class="symbol-input100">
-                        <i class="fa fa-lock" aria-hidden="true"></i>
+                        <i class="fa fa-user-circle" aria-hidden="true"></i>
                     </span>
                     </div>
 
