@@ -11,9 +11,14 @@ $token=$_SESSION['token'] ;
 $username=$_SESSION['username'] ;
 $user= $query->getUser($username);
 
+
 if ($user['health'] <= 0  ){
     return    header('location:auth/payment.php');
 }
+
+include 'check.php';
+
+
 
 ?>
 <!DOCTYPE html>

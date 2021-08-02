@@ -144,5 +144,32 @@ class User  {
         }
 
     }
+
+
+
+    /// get config
+    public  function getConfig (){
+        $fetch_sql = "SELECT * FROM `config`  WHERE id = 1";
+        $fetch_res = $this->connect->prepare($fetch_sql);
+        $fetch_res->execute();
+        if ($config=$fetch_res->fetch()) {
+            return $config;
+        }else{
+            return  false;
+        }
+    }
+
+
+    /// change config
+    public  function changeConfig ($time){
+        $fetch_sql = "UPDATE `config` SET `T`=? WHERE `id`= 1 ";
+        $fetch_res = $this->connect->prepare($fetch_sql);
+        $fetch_res->bindvalue(1, $time);
+        if ($fetch_res->execute()) {
+            return true;
+        }else{
+            return  false;
+        }
+    }
 }
 
