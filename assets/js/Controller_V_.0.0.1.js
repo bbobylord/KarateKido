@@ -5,6 +5,7 @@ let Night = "https://s18.picofile.com/file/8437587668/Night.png";
 var d = new Date();
 var h = d.getHours();
 var baseUrl = `${window.location.origin}`;
+var pathUrl = `${window.location.pathname}`
 
 let Branch = Number(0);
 let ClickKey = Number(0);
@@ -230,12 +231,18 @@ async function Lost() {
     /// Erfan changed
     /// send api to php server
     /// send token user and point To serer
+    console.log(pathUrl)
+    if (pathUrl == '/free.php'){
+        return  window.location.replace(baseUrl + `/free.php`)
+    }
     sendApiAfterEndGame()
 
 
 }
 
 async function sendApiAfterEndGame (){
+
+
     const Record = Number(document.getElementById("Record").innerHTML);
     const tokenUser = localStorage.getItem('token');
     const rawResponse = await fetch(baseUrl + `/action/api/changePoint.php?token=${tokenUser}&point=${Record}`);
