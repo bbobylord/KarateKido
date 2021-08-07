@@ -49,25 +49,11 @@
                         </button>
                     </div>
 
-                    <div class="text-center p-t-12">
 
-                        <a class="txt2" href="../free.php">
-                            بازی رایگان
-                        </a>
-                    </div>
 
 
                     <div class="text-center p-t-136">
-                        <div class="imgSocial">
-                            <a href="https://www.instagram.com/karatekido.ir/">
-                                <img src="https://img.icons8.com/color/48/000000/instagram-new--v1.png"/>
 
-
-                            </a>
-                            <a href="https://t.me/karatekido_ir">
-                                <img src="https://img.icons8.com/color/48/000000/telegram-app--v1.png"/>
-                            </a>
-                        </div>
                         <a class="txt2" href="register.php">
                             ساخت اکانت جدید
                             <i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>

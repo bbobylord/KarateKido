@@ -29,7 +29,7 @@ include 'check.php';
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Karate Kido</title>
     <link rel="stylesheet" href="./assets/Sass/Style.css">
-    <script src="assets/js/Controller_V_.0.0.1.js"></script>
+    <script src="assets/js/Controller_V_.0.0.2.js"></script>
 </head>
 <body>
     <main id="Main">

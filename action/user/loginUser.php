@@ -25,7 +25,10 @@ if (
         $_SESSION["token"] = $user['token'];
         $_SESSION["username"] = $user['username'];
         $_SESSION["phone"] = $user['phone'];
-        return header('Location: ../../index.php');
+
+        return header('Location: http://'.$_SERVER['HTTP_HOST'].'/main.php');
+        exit;
+
 
 
     }

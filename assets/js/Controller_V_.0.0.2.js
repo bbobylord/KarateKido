@@ -233,7 +233,8 @@ async function Lost() {
     /// send token user and point To serer
     console.log(pathUrl)
     if (pathUrl == '/free.php'){
-        return  window.location.replace(baseUrl + `/free.php`)
+        const Record = Number(document.getElementById("Record").innerHTML);
+        return  window.location.replace(baseUrl + `/main.php?point=${Record}`)
     }
     sendApiAfterEndGame()
 
@@ -248,8 +249,9 @@ async function sendApiAfterEndGame (){
     const rawResponse = await fetch(baseUrl + `/action/api/changePoint.php?token=${tokenUser}&point=${Record}`);
     const res = await rawResponse.json();
 
+
     setTimeout(()=>{
-        window.location.replace(baseUrl + `/auth/remacth.php`)
+        window.location.href = baseUrl + `/auth/remacth.php?token=${tokenUser}`
 
     },1500)
 }

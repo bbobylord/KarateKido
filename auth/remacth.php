@@ -1,7 +1,12 @@
 <?php
+session_start();
+
 include('layout/header.php');
 include('../dataBase/userClass.php');
-session_start();
+
+
+
+
 
 if (!$_SESSION['token'] ){
     header('location:auth/login.php');
@@ -62,8 +67,9 @@ $me = $query->getUserBytoken($_SESSION['token']);
                     </tbody>
                 </table>
                 <a href="../index.php" type="button" class="btn btn-success btn-lg btn-block">شروع مجدد بازی </a>
+                <a href="../main.php" type="button" class="btn btn-info btn-lg btn-block">پروفایل</a>
                 <a href="../action/user/logout.php" type="button" class="btn btn-danger btn-lg btn-block">خروج </a>
-                <input hidden id="token" name="token" data-id="<?= $_SESSION["token"] ?>">
+                <input hidden id="token" name="token" data-id="<?= $_SESSION['token'] ?>">
             </form>
         </div>
     </div>

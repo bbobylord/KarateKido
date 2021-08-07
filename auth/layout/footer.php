@@ -7,6 +7,8 @@
 <script src="../assets/vendor/select2/select2.min.js"></script>
 <!--===============================================================================================-->
 <script src="../assets/vendor/tilt/tilt.jquery.min.js"></script>
+
+
 <script>
 $('.js-tilt').tilt({
     scale: 1.1

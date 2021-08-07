@@ -1,7 +1,8 @@
 <?php
 header('Content-Type: application/json');
 include '../../dataBase/userClass.php';
-
+session_start();
+//return header('Location: http://'.$_SERVER['HTTP_HOST'].'/auth/remacth.php');
 if (
     isset($_REQUEST["token"]) && $_REQUEST["token"] != "" &&
     isset($_REQUEST["point"]) && $_REQUEST["point"] != ""
@@ -25,8 +26,11 @@ if (
     $helthNow = $user['health'] - 1;
 
     if ($query->changePoint($token, $bestPoint, $helthNow,$bestWeekPoint)) {
+
+
         $response = [
             "result" => true,
+            "token" => $_SESSION['token']
         ];
 
     } else {

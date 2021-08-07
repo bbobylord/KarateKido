@@ -31,7 +31,8 @@ if (
         $_SESSION["token"] = $token;
         $_SESSION["username"] = $userName;
         $_SESSION["phone"] = $phone;
-        return header('Location: /auth/doneRegister.php');
+        return header('Location: http://'.$_SERVER['HTTP_HOST'].'/auth/doneRegister.php');
+        exit;
 
     }
 } else {

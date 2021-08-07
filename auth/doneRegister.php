@@ -1,5 +1,9 @@
-<?php include('layout/header.php');
+
+<?php
+include('layout/header.php');
 session_start();
+
+
 ?>
 
 
@@ -13,12 +17,10 @@ session_start();
                 <form class="login100-form validate-form">
                 <span class="login100-form-title">
                    ثبت نام با موفقیت انجام شد
-                </span>  <span class="login100-form-title">
-                 نام کاربری   :<?=$_SESSION["username"] ?>
+
                 </span>
 
-
-                    <a href="../index.php" type="button" class="btn btn-success btn-lg btn-block">برای ورود به بازی کلیک کنید</a>
+                    <a href="../main.php" type="button" class="btn btn-success btn-lg btn-block">ورود به پرو فایل</a>
                     <input hidden id="token" name="token" data-id="<?=$_SESSION["token"] ?>">
                 </form>
             </div>
