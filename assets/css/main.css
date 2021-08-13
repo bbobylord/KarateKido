@@ -558,3 +558,14 @@ iframe {
 .imgSocial img{
   width: 50px;
 }
+
+.gift{
+  direction: rtl;
+
+}
+
+
+.gift  p img{
+  width: 50vh !important;
+
+}

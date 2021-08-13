@@ -63,6 +63,11 @@ $me = $query->getUserBytoken($_SESSION['token']);
 
                     <div class="text-center p-t-136">
                         <div class="imgSocial">
+
+                            <a href="gift.php">
+                                <img src="https://img.icons8.com/color/96/000000/gift--v1.png"/>
+                                <p>جوایز</p>
+                            </a>
                             <a href="https://www.instagram.com/karatekido.ir/">
                                 <img src="https://img.icons8.com/color/48/000000/instagram-new--v1.png"/>
                                 <p>صفحه ی اینستاگرام</p>
@@ -71,6 +76,8 @@ $me = $query->getUserBytoken($_SESSION['token']);
                                 <img src="https://img.icons8.com/color/48/000000/telegram-app--v1.png"/>
                                 <p >  کانال تلگرام</p>
                             </a>
+
+
                         </div>
 
                         <p style="margin-bottom: 50px;">نمایش لیست برندگان در کانال تلگرام اعلام میشود</p>
